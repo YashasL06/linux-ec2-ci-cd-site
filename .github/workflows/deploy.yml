@@ -11,7 +11,7 @@ uses: actions/checkout@v4
 -name: Start SSH agent and add key
 uses: webfactory/ssh-agent@v0.9.0
 with:
-shh-private-key:${{ secrets.EC2_SSH_KEY}}
+ssh-private-key:${{ secrets.EC2_SSH_KEY}}
 -name: Deploy on EC2
 run: |
 ssh -o StrictHostKeyChecking=no ${{ sectrts.EC2_USER}}@${{ secrets.EC2_HOST}}
